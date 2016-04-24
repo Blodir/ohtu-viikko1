@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ohtu</groupId>
-    <artifactId>Verkkokauppa2</artifactId>
+    <artifactId>Verkkokauppa4</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Verkkokauppa2</name>
+    <name>Verkkokauppa4</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -19,11 +19,11 @@
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
-            <artifactId>junit</artifactId>z
+            <artifactId>junit</artifactId>
             <version>4.10</version>
             <scope>test</scope>
         </dependency>
-    
+        
             <!-- SPRING -->
         
         <dependency>
@@ -49,5 +49,34 @@
             <artifactId>spring-beans</artifactId>
             <version>${org.springframework.version}</version>
         </dependency>   
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.9.0</version>
+            <scope>test</scope>
+       </dependency>
     </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>2.7.1</version>
+            </plugin>
+        </plugins>
+    </reporting>
 </project>
